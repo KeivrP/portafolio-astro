@@ -19,7 +19,6 @@ export default {
 			marrsgreen: "#007A7A",
 			marrsdark: "#004D4D",
 			cardlight: "#EFF3F3",
-	
 			// bgdark: "#2D2D2D",
 			bgdark: "#1D2A35",
 			carrilight: "#57DCB4",
