@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<div class="text-center">
+    <p class="double-underline text-3xl leading-9 flex items-center">  
+     
+      {title}
+    </p>
+  </div>
+
+  <style>
+    .double-underline {
+      position: relative;
+      display: inline-block;
+    }
+  
+    .double-underline::before,
+    .double-underline::after {
+      content: "";
+      transform: rotate(-5deg);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -12px; /* Ajusta la distancia entre las líneas */
+      height: 2px; /* Grosor de las líneas */
+      background-color: #05ce91; /* Color del subrayado */
+    }
+  
+    .double-underline::before {
+      transform: translateY(-5px) rotate(5deg); /* Desplaza la primera línea hacia arriba */
+    }
+  </style>
+  

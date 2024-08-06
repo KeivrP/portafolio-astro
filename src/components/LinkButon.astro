@@ -1,22 +1,11 @@
 ---
-interface Props {
-  className?: string;
-  targetBlank?: string;
-  href: string;
-}
-
-const { className, targetBlank, href } = Astro.props;
+const { href } = Astro.props
 ---
 
 <a
-  role="button"
-  class={`${
-    false
-      ? "border border-marrsgreen hover:bg-marrsgreen dark:border-carrigreen dark:hover:bg-carrigreen text-marrsgreen hover:text-cardlight dark:text-carrigreen dark:hover:text-carddark transition"
-      : "bg-marrsgreen hover:bg-marrslight active:bg-marrsdark dark:hover:bg-carrilight dark:active:bg-carridark dark:bg-carrigreen text-bglight dark:text-bgdark"
-  } py-2 px-3 rounded lg:text-xl ${className} outline-marrsgreen dark:outline-carrigreen focus-visible:outline-double outline-offset-2`}
-  href={href ?? "#"}
-  target={`${targetBlank ? "_blank" : "_self"}`}
+  href={href}
+  role="link"
+  class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
 >
   <slot />
 </a>
