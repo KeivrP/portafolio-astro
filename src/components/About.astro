@@ -1,0 +1,51 @@
+---
+import SectionContainer from "./SectionContainer.astro";
+import StudyGroup from "./StudyGroup.astro";
+import TextTittle from "./TextTittle.astro";
+---
+
+<SectionContainer id="sobre-mi" >
+  <TextTittle title="Sobre Mi" />
+  <br />
+  <br />
+  <article
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+  >
+    <div
+      class="[&>p]:mb-4 [&>p>strong]:text-marrsgreen dark:[&>p>strong]:text-carrilight [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    >
+      <p>
+        Me llamo Keiver Pacheco. Empecé en la programación hace mas de 10 años.
+        Estudié TSU en Análisis y Diseño de Sistemas en la UNEFA. Actualmente,
+        estoy <strong>trabajando como freelance</strong>.
+      </p>
+
+      <p>
+        He tenido la oportunidad de transformar sistemas cliente-servidor <strong
+          >hechos en Oracle Forms and Reports a modernos entornos web,</strong
+        >.y he creado innovadores modelos y aplicaciones CRM que han optimizado
+        la gestión y eficiencia de diversas empresas.
+      </p>
+
+      <p>
+        Como desarrollador web, <strong
+          >disfruto trabajar en equipo y adaptarme a diferentes situaciones.
+          Siempre estoy actualizándome en las últimas tecnologías y me encanta
+          lo que hago</strong
+        >. Mi objetivo profesional es seguir perfeccionando mis habilidades como
+        desarrollador y contribuir a proyectos innovadores que empujen los
+        límites de la tecnología.
+      </p>
+    </div>
+
+    <img
+      width="200"
+      height="200"
+      src="/me.webp"
+      alt={"Keiver Pacheco"}
+      class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+      style="object-position: 50% 50%"
+    />
+  </article>
+  <StudyGroup/>
+</SectionContainer>
