@@ -1,25 +1,24 @@
 ---
-interface Props {
-  title: string;
-  academy: string;
-  year: number;
-  key: number
-}
-
-const { title, academy, year } = Astro.props;
+import { Studies } from "../data/database";
 ---
 
-<div class="edu-group mb-4">
-  <div class="overflow-hidden">
-    <h3
-      class={`edu-heading text-marrsgreen dark:text-carrigreen text-lg font-medium`}
-    >
-     {title}
-    </h3>
-  </div>
-  <div class="overflow-hidden">
-    <span class={`edu-info text-slate-500 dark:text-slate-200 italic`}>
-     {academy} | ({year})
-    </span>
-  </div>
-</div>
+{
+  Studies.map(({ title, academy, year }) => {
+    return (
+      <div class="edu-group mb-4">
+        <div class="overflow-hidden">
+          <h3
+            class={`edu-heading text-marrsgreen dark:text-carrigreen text-lg font-medium`}
+          >
+            {title}
+          </h3>
+        </div>
+        <div class="overflow-hidden">
+          <span class={`edu-info text-slate-500 dark:text-slate-200 italic`}>
+            {academy} | ({year})
+          </span>
+        </div>
+      </div>
+    );
+  })
+}

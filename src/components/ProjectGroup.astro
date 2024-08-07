@@ -41,9 +41,13 @@ import { PROJECTS } from "../data/database";
                 {tags.map((tag) => (
                   <li>
                     <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      class:list={[
+                        tag.name
+                          ? `flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `
+                          : tag.class,
+                      ]}
                     >
-                      <tag.icon class="size-4" />
+                      <tag.icon class={`${tag.name ? "size-4" : "w-14 h-7 py-2"}`} />
                       {tag.name}
                     </span>
                   </li>
